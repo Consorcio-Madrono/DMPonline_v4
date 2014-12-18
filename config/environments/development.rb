@@ -35,14 +35,20 @@ DMPonline4::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  config.force_ssl = false
+
   #devise config
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'dmp.consorciomadrono.es' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 25 }
+  config.action_mailer.smtp_settings = { enable_starttls_auto: false  }
   
-  ActionMailer::Base.default :from => 'address@example.com'
+  ActionMailer::Base.default :from => 'e-ciencia@madrimasd.org'
   ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = { :address => "localhost", :port => 1025 }
+  ActionMailer::Base.smtp_settings = { :address => "localhost", :port => 25 }
+  ActionMailer::Base.smtp_settings[:openssl_verify_mode] = false
+
+  ActionMailer::Base.smtp_settings[:enable_starttls_auto] = false
   
   
 	# Add the fonts path
@@ -55,8 +61,8 @@ DMPonline4::Application.configure do
 	 config.middleware.use ExceptionNotification::Rack,
 	  :email => {
 	    :email_prefix => "[DMPonline4 ERROR] ",
-	    :sender_address => %{"No-reply" <noreply@dcc.ac.uk>},
-	    :exception_recipients => %w{dmponline@dcc.ac.uk}
+	    :sender_address => %{"No-reply" <e-ciencia@madrimasd.org>},
+	    :exception_recipients => %w{e-ciencia@madrimasd.org}
 	  }
 	  
 	

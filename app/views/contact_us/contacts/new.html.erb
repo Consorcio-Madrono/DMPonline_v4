@@ -8,7 +8,6 @@
 </h1>
 <p>
 	<%= raw t('contact_page.intro_text_html') %>
-  <%= raw t('contact_page.github_text_html') %>
 </p>
 <div class='column_container'>
 	<!-- left column  content -->
@@ -20,7 +19,7 @@
 						<% if ContactUs.require_name %>
 							<tr>
 								<td class='string required first' id='contact_us_contact_name_input'>
-									<%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+									<%= f.label :name, ('Nombre' + content_tag(:abbr, '*', :class => 'required')).html_safe %>
 								</td>
 								<td>
 									<% if user_signed_in? then %>
@@ -52,7 +51,7 @@
 						<% if ContactUs.require_subject %>
 							<tr>
 								<td class='string required first' id='contact_us_contact_subject_input'>
-									<%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+									<%= f.label :subject, ('Asunto' + content_tag(:abbr, '*', :class => 'required')).html_safe %>
 								</td>
 								<td>
 									<%= f.text_field :subject %>
@@ -73,7 +72,7 @@
 								<% end %>
 							</td>
 						</tr>
-						<% if !user_signed_in? then %>
+						<!--<% if !user_signed_in? then %>
 							<tr>
 								<td class='text required first'>
 									Security check
@@ -82,11 +81,11 @@
 									<%= recaptcha_tags %>
 								</td>
 							</tr>
-						<% end %>
+						<% end %>-->	
 					</table>
 				</div>
 				<div class="div_right">
-					<%= f.submit :submit, :class => 'btn btn-primary', :label => "Submit" %>
+					<%= f.submit :Enviar, :class => 'btn btn-primary', :label => "Submit" %>
 				</div>
 			<% end %>
 		</div>
@@ -97,8 +96,7 @@
 			<%= raw t('contact_page.address_text_html') %>
 			<!-- map -->
 			<div class="div_map">
-				<iframe width="90%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=EH8+9LE&amp;aq=&amp;sll=55.85546,-4.232459&amp;sspn=0.195785,0.663986&amp;ie=UTF8&amp;hq=&amp;hnear=EH8+9LE,+United+Kingdom&amp;ll=55.944435,-3.186767&amp;spn=0.006104,0.02075&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.269013732787!2d-3.8764899999999765!3d40.33637799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIwJzExLjAiTiAzwrA1MiczNS40Ilc!5e0!3m2!1ses!2ses!4v1417700529273" width="90%" height="250" frameborder="0" style="border:0"></iframe>
 			</div>
 		</div>
 	</div>

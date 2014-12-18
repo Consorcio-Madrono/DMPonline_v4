@@ -14,11 +14,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 end
 
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
-
 gem 'uglifier', '>= 1.0.3'
 gem 'less-rails'
 
@@ -60,7 +55,6 @@ gem 'validate_url'
 
 gem 'thin'
 gem 'wicked_pdf'
-gem 'htmltoword'
 gem 'feedzirra', '0.5.0'
 
 # To use ActiveModel has_secure_password
@@ -77,6 +71,3 @@ gem 'feedzirra', '0.5.0'
 
 # To use debugger
 # gem 'debugger'
-
-gem 'ledermann-rails-settings'
-gem 'jbuilder'

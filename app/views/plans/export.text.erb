@@ -1,0 +1,39 @@
+      <%
+      oldDefaultLocale= I18n.default_locale
+      oldLocale= I18n.locale
+      I18n.default_locale = :en
+      I18n.locale = :en
+      %>
+<%= @plan.project.title %>
+
+<%= t("phases."+@plan.version.phase.title) %>
+
+<% sections = @plan.sections.sort_by(&:"number") %>
+<% sections.each do |section| %>
+
+<%= t("sections."+section.title) %>
+<% questions = section.questions.sort_by(&:"number") %>
+<% questions.each do |question| %>
+
+<%= t('questions.'+question.text) %>
+<% answer = @plan.answer(question.id, false) %>
+<% if answer.nil? then %>
+
+Question not answered.
+<% else %>
+<% if question.multiple_choice then %>
+
+<% answer.options.each do |option| %>
+
+<%= option.text %>
+<% end %>
+<% end %>
+
+<%= strip_tags(answer.text) %>
+<% end %>
+<% end %>
+<% end %>
+      <%
+      I18n.default_locale = oldDefaultLocale
+      I18n.locale = oldLocale
+      %>

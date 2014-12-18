@@ -1,12 +1,15 @@
-<p>Hello <%= @project_group.user.name %></p>
+<p>Hola <%= @project_group.user.name %></p>
 
 <% 
 access_level = "read-only"
+nivel = "solo lectura"
 if @project_group.access_level == 2 then
 	access_level = "editor"
+	nivel = "editor"
 elsif @project_group.access_level == 3 then
 	access_level = "co-owner"
+	nivel = "co-propietario"
 end
 %>
 
-<p>You have been given <%= access_level %> access to the DMP "<%= link_to @project_group.project.title, project_path(@project_group.project, :only_path => false) %>".</p>
+<p>Te han concedido permisos como <%= access_level %> para acceder al PGD "<%= link_to @project_group.project.title, project_path(@project_group.project, :only_path => false) %>".</p>

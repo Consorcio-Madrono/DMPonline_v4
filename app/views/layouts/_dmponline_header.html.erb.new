@@ -1,0 +1,167 @@
+<!-- header information -->
+
+<header>
+
+<!-- !!!! quick and dirty hack this hidden div is included to jump the create plan questions (funder and organization)  -->
+<div style="display:none">
+<form accept-charset="UTF-8" action="/projects" class="formtastic project" id="new_project" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zCCbDoJ6epxkaQ8pgKSjurhMaWRLp18bohf1nFdlhFA=" /></div>
+	<fieldset class="inputs"><ol>
+		<div class="createa-project">
+			<h1> Crear un nuevo plan </h1>
+			<div class="info-new-project">
+				<p>Por favor, seleccione la información de los siguientes desplegables, de forma que podamos determinar qué preguntas y orientación han de ser mostrados en su plan.</p>
+			</div>
+			<div class="dropdowns">
+				<div class="control-group" id="funder-control-group">
+					<div class="controls">               
+						<li class="select input optional" id="project_funder_id_input"><label class=" label" for="project_funder_id">Si se solicita financiación, seleccione el organismo financiador de su investigación.</label><select class="typeahead" id="project_funder_id" name="project[funder_id]"><option value="">Funder</option>
+<option value="3">European Commission (Horizon 2020)</option></select>
+
+</li>
+						<div class="div_clear"></div>
+						<div class="move_2_right">
+							<a href='#' id="no-funder">No aplicable / no listado/a.</a>
+						</div>	
+						<div class="create_project_question_descriptions">
+							Si no, déjelo en blanco.
+						</div>
+					</div>
+				</div>
+				<div class="control-group" id="institution-control-group">
+					<div class="controls">
+						<li class="select input optional" id="project_institution_id_input"><label class=" label" for="project_institution_id">Para ver preguntas y/u orientación relativas a su institución, seleccione su entidad.</label><select class="typeahead" id="project_institution_id" name="project[institution_id]"><option value="">Entidad</option>
+<option value="2" selected="selected">Consorcio Madroño</option></select>
+
+</li>
+						<div class="div_clear"></div>
+						<div class="move_2_right">
+							<a href='#' id="no-institution">No aplicable / no listado/a.</a>
+						</div>
+						<div class="create_project_question_descriptions">
+							Puede dejar en blanco o seleccionar una entidad distinta a la suya.
+						</div>
+					</div>
+				</div>
+				<div class="control-group" id="template-control-group">
+					<div class="controls">
+						<li class="select input optional" id="project_dmptemplate_input"><label class=" label" for="project_dmptemplate_id">Choose a template</label><select class="typeahead" id="project_dmptemplate_id" name="project[dmptemplate_id]"><option value=""></option>
+<option value="1">Horizon 2020</option></select>
+
+</li>
+						<div class="create_project_question_descriptions">
+							Hay varias plantillas que podría usar. Por favor, elija una.
+						</div>
+					</div>
+				</div>
+				<div class="control-group" id="guidance-control-group">
+					<div class="controls">
+						<li class="check_boxes input optional" id="project_guidance_groups_input"><fieldset class="choices"><legend class="label"><label>Marque para seleccionar cualquier otra fuente de orientación que quiera ver.</label></legend><input id="project_guidance_groups_none" name="project[guidance_group_ids][]" type="hidden" value="" /><ol class="choices-group"></ol></fieldset>
+
+</li>
+					</div>
+				</div>
+			</div>
+		</div>
+</ol></fieldset>	<!-- submit buttons -->
+	<fieldset class="actions"><ol>
+		<a id="create-plan-button" style="display:none;" data-toggle="modal" href="#project-confirmation-dialog" class="btn btn-primary">Crear un plan</a>
+</ol></fieldset></form>
+
+</div>
+
+	<div class='header_left'>
+		<div class="home_logo">
+			<%= link_to( image_tag('logo.jpg'), root_path)%>
+		</div>
+	</div>
+	<div class="header_right">	
+		<div class="signIn">
+			<ul class="navbar">
+				<% if user_signed_in? %>
+	            	<li class="dropdown sign_in">
+				<%= I18n.locale %>
+				<%= I18n.default_locale %>
+				<%  
+					oldDefaultLocale= I18n.default_locale
+					oldLocale= I18n.locale
+					I18n.default_locale = :en
+					I18n.locale = :en
+				%>
+	                	<a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= t('helpers.signed_in')%>
+	                	  	<%= current_user.name %> <b class="caret"></b>
+	                	</a>
+				<%  
+					I18n.default_locale = oldDefaultLocale
+					I18n.locale = oldLocale
+				%>
+						<ul class="dropdown-menu" id="signIn_dropdown">
+							<li><%= link_to t('helpers.edit_profile'), edit_user_registration_path, :class => 'signIn_dropdown_link' %></li>
+							<% if current_user.is_admin? %>
+								<li><%= link_to t('helpers.admin_area'), '/admin', :class => 'signIn_dropdown_link' %></li>
+							<%end%>	
+							<% if current_user.is_org_admin? %>
+								<li><%= link_to t('org_admin.admin_area'), admin_index_dmptemplate_path(current_user.organisation_id), :class => 'signIn_dropdown_link' %></li>
+							<%end%>	
+							<li><%= link_to t('helpers.sign_out'), destroy_user_session_path, method: :delete, :class => 'signIn_dropdown_link' %></li>
+							
+						</ul>
+	            	</li>
+	            <% else %>
+	            	
+	            	<li>
+	            	<% unless controller_name == "home" && action_name == "index" then %>
+						<a href="#header-login-form" data-toggle="modal"><%= t('helpers.sign_in')%></a> / 
+						<a href="#header-register-form" data-toggle="modal"><%= t('helpers.sign_up')%></a>
+					<% else %>
+                  <%= raw "&nbsp;" %>
+                <% end %>
+					</li>
+				<% end %> 
+			</ul>
+		</div>	
+		<!-- main menu -->
+		<div class="main_nav">
+			<ul class="nav nav-pills">
+				<!-- Navigation for organisation admin -->
+                <% if (user_signed_in? && current_user.is_org_admin? && ( action_name.include? "admin_" ) ) %>
+                	<li>
+	                    <%= link_to t('org_admin.template_label'), admin_index_dmptemplate_path(current_user.organisation_id), :class => "btn header_button btn-primary" %>
+	                </li>    
+	                <li>
+	                	<%= link_to t('org_admin.guidance_label'), admin_index_guidance_path(current_user.organisation_id), :class => "btn header_button btn-primary"%>
+	                </li>
+	                <li>
+	                	<%= link_to t('org_admin.org_details_label'), admin_show_organisation_path(current_user.organisation_id), :class => "btn header_button btn-primary"%>
+	                </li>
+	                <li>
+	                	<%= link_to t('org_admin.user_list_label'), '/org/admin/users', :class => "btn header_button btn-primary"%>
+	                </li>
+                <% else %>
+                	<% if user_signed_in? %>
+		           		<li>
+		                    <%= link_to t('helpers.view_plans_label'), projects_path, :class => "btn header_button btn-primary" %>
+		                </li>    
+		                <li>
+		                	<%= link_to t('helpers.create_plan_label'), '#', :id => "direct_create", :class => "btn header_button btn-primary"%>
+		                </li>
+			                 
+	                <% else %>
+	                	<li>
+	                    	<%= link_to t('helpers.home'), root_path , :class => "btn header_button btn-primary"%>            
+	                	</li>
+	                <% end %>
+	           		<li>
+						<%= link_to t('helpers.about_us_label'), '/about_us', :class => "btn header_button btn-grey"%>
+					</li>
+					<li>
+						<%= link_to t('helpers.news_label'), '/news', :class => "btn header_button btn-grey"%>
+					</li>
+					<li class="last_li">
+	                    <%= link_to t('helpers.help_label'), '/help', :class => "btn header_button btn-grey"%>
+	            	</li>
+	            <%end%>	
+	      	</ul>
+         	          		
+    	</div>	
+	</div>
+</header>    

@@ -20,12 +20,12 @@ DMPonline4::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-	# Add the fonts path
-	config.assets.paths << Rails.root.join('app', 'assets', 'fonts', 'videos')
-	
-	# Precompile additional assets
-	config.assets.precompile += %w( .svg .eot .woff .ttf )
-
+        # Add the fonts path
+        config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+        
+        # Precompile additional assets
+        config.assets.precompile += %w( .svg .eot .woff .ttf )
+        
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -35,7 +35,7 @@ DMPonline4::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = false
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
@@ -57,7 +57,7 @@ DMPonline4::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = { enable_starttls_auto: false  }
 
   # Enable threaded mode
   # config.threadsafe!
@@ -68,14 +68,15 @@ DMPonline4::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-	
-	 # Error notifications by email
-	 config.middleware.use ExceptionNotification::Rack,
-	  :email => {
-	    :email_prefix => "[DMPonline4 ERROR] ",
-	    :sender_address => %{"No-reply" <noreply@dcc.ac.uk>},
-	    :exception_recipients => %w{dmponline@dcc.ac.uk}
-	  }
+        
+         # Error notifications by email
+         config.middleware.use ExceptionNotification::Rack,
+          :email => {
+            :email_prefix => "[DMPonline4 ERROR] ",
+            :sender_address => %{"No-reply" <noreply@example.com>},
+            :exception_recipients => %w{dmponline@example.com}
+          }
+   
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

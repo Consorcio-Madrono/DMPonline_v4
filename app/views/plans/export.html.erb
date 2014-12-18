@@ -1,37 +1,17 @@
 <div id="export_font">
+      <%
+      oldDefaultLocale= I18n.default_locale
+      oldLocale= I18n.locale
+      I18n.default_locale = :en
+      I18n.locale = :en
+      %>
 	<h1><%= @plan.project.title %></h1>
-	<h2><%= @plan.version.phase.title %></h2>
+	<h2><%= t("phases."+@plan.version.phase.title) %></h2>
 	<div class="dmp_details_body">
 		<div class="dmp_details">
-			<%
-				details = @exported_plan.admin_details
-				if details.present?
-			%>
-				<h3>Admin Details</h3>
-				<table class="dmp_table">
-					<thead>
-						<tr>
-							<th class="dmp_th_medium"><%= t('helpers.title')%></th>
-							<th class="dmp_th_big"><%= t('helpers.desc')%></th>
-						</tr>
-					</thead>
-					<tbody>
-					<%
-						details.each do |field|
-							value = @exported_plan.send(field)
-							if value.present?
-					%>
-						<tr>
-							<th class="dmp_th_border"><p>- <%= t("helpers.plan.export.#{field}") -%></p></th>
-							<td class="dmp_td_border"><%= value -%></td>
-						</tr>
-							<% end %>
-						<% end %>
-					</tbody>
-				</table>
-      <% end %>
-			<% @exported_plan.sections.each do |section| %>
-				<h3><%= section.title %></h3>
+			<% sections = @plan.sections.sort_by(&:"number") %>
+			<% sections.each do |section| %>
+				<h3><%= t("sections."+section.title) %></h3>
 				<table class="dmp_table">
 					<thead>
 					    <tr>
@@ -40,11 +20,11 @@
 	   					</tr>
    					</thead>
    					<tbody>
-						<% questions = @exported_plan.questions_for_section(section.id) %>
+						<% questions = section.questions.sort_by(&:"number") %>	
 						<% questions.each do |question| %>
 							<tr>
 								<th class="dmp_th_border" >
-									<p>- <%= question.text %></p>
+									<p>- <%= t('questions.'+question.text) %></p>
 								</th>
 	        					<td class="dmp_td_border" >	
 									<% answer = @plan.answer(question.id, false) %>
@@ -68,4 +48,8 @@
 			<% end %>
 		</div>	
 	</div>	
+      <%
+      I18n.default_locale = oldDefaultLocale
+      I18n.locale = oldLocale
+      %>
 </div>

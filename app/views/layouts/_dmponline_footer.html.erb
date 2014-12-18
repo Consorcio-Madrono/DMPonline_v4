@@ -6,18 +6,21 @@
 	            <li><a href="/contact-us"><%= t('contact_page.title') %></a></li>
 	            <li class="muted">|</li>
 	            <li><a href="/terms"><%= t('terms_page.title') %></a></li>
-	            <li class="muted">|</li>
-	            <li><a href="http://dmponline3.dcc.ac.uk/" target='_blank'><%= t('dmponline3_text') %></a></li>
+<!--	            <li class="muted">|</li>
+	            <li><a href="http://dmponline3.dcc.ac.uk/" target='_blank'><%= t('dmponline3_text') %></a></li>-->
        		</ul>
        	</div>
        	<div class="second_row">
-    		<p id="dcc_link">&copy; 2004 - <%= Time.now.year %><%= link_to ' Digital Curation Centre (DCC)', 'http://www.dcc.ac.uk'%>
+    		<p id="dcc_link">&copy; 2004 - <%= Time.now.year %><%= link_to ' Consorcio Madroño', 'http://www.consorciomadrono.es'%>
        		</p>
     	</div>
     </div>	
    	<div class="right_side_footer">
-   		<p><%= link_to( image_tag('dcc_logo.png', :class => 'footer_logo'), 'http://www.dcc.ac.uk/', :id => 'footer_right_dcc')%>
-   			<%= link_to( image_tag('2013_Jisc_Logo_RGB72.png', :class => 'footer_logo'), 'http://www.jisc.ac.uk/', :id => 'footer_right_jisc')%></p>
+   		<p>
+		Powered by:
+		<%= link_to( image_tag('dmp_logo.png', :class => 'footer_logo'), 'http://dmponline.dcc.ac.uk/')%>
+		<%= link_to( image_tag('dcc_logo.png', :class => 'footer_logo'), 'http://www.dcc.ac.uk/', :id => 'footer_right_dcc')%>
+		</p>
    	</div>	
     
     

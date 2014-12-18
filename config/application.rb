@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'csv'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -31,8 +30,10 @@ module DMPonline4
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.available_locales = [:es, :en]
+    config.i18n.default_locale = :es
+    config.i18n.locale = :es
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -60,31 +61,28 @@ module DMPonline4
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.precompile += %w(plans.js)
-    config.assets.precompile += %w(projects.js)    
+    config.assets.precompile += %w(admin.js)
+    config.assets.precompile += %w(projects.js)
     config.assets.precompile += %w(jquery.placeholder.js)
     config.assets.precompile += %w(jquery.tablesorter.js)
-    config.assets.precompile += %w(export_configure.js)
-    config.assets.precompile += %w(toolbar.js)
-    config.assets.precompile += %w(admin.js)
     config.assets.precompile += %w(admin.css)
-    
     config.autoload_paths += %W(#{config.root}/lib)
-
+    
     # Set the default host for mailer URLs
     config.action_mailer.default_url_options = { :host => 'dmponline.example.com' }
     config.active_record.whitelist_attributes = true
-
+    
      # Enable shibboleth as an alternative authentication method
     # Requires server configuration and omniauth shibboleth provider configuration
     # See config/initializers/omniauth.rb
-    config.shibboleth_enabled = true
-
+    config.shibboleth_enabled = false
+    
     # Absolute path to Shibboleth SSO Login
     config.shibboleth_login = 'https://localhost/Shibboleth.sso/Login'
-
+    
     WickedPdf.config = {
 	  :exe_path => '/usr/local/bin/wkhtmltopdf'
 	}
-
+    
   end
 end

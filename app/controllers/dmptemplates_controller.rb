@@ -38,7 +38,7 @@ class DmptemplatesController < ApplicationController
   # PUT /dmptemplates/1
   # PUT /dmptemplates/1.json
   def admin_update
- 	if user_signed_in? && current_user.is_org_admin? then
+ 		if user_signed_in? && current_user.is_org_admin? then
    		@dmptemplate = Dmptemplate.find(params[:id])
    		@dmptemplate.description = params["template-desc"]
 
@@ -53,7 +53,7 @@ class DmptemplatesController < ApplicationController
 	  	end
   	else
 			render(:file => File.join(Rails.root, 'public/403.html'), :status => 403, :layout => false)
-	end
+		end
   end
 
 
@@ -169,8 +169,15 @@ class DmptemplatesController < ApplicationController
 	def admin_previewphase
 		if user_signed_in? && current_user.is_org_admin? then
 			
-			@version = Version.find(params[:id])
+			@phase = Phase.find(params[:id])
 			
+			#check for the most recent published version, if none is available then return the most recent one
+			versions = @phase.versions.where('published = ?', true).order('updated_at DESC')
+			if versions.any?() then
+				@version = versions.first
+			else
+				@version = @phase.versions.order('updated_at DESC').first
+			end
 				
 			respond_to do |format|
 				format.html
@@ -199,7 +206,7 @@ class DmptemplatesController < ApplicationController
 	#create a phase
 	def admin_createphase
     if user_signed_in? && current_user.is_org_admin? then
-	 	@phase = Phase.new(params[:phase])
+	 		@phase = Phase.new(params[:phase])
 	    @phase.description = params["phase-desc"]
 	    @version = @phase.versions.build
 	    @version.title = "#{@phase.title} v.1"
@@ -280,7 +287,7 @@ class DmptemplatesController < ApplicationController
 		#clone a version of a template
 		def admin_cloneversion
 			if user_signed_in? && current_user.is_org_admin? then
-                @old_version = Version.find(params[:version_id])
+	   		@old_version = Version.find(params[:version_id])
 				@version = @old_version.amoeba_dup
 				@phase = @version.phase
 
@@ -315,7 +322,7 @@ class DmptemplatesController < ApplicationController
 	#create a section
 	def admin_createsection
     if user_signed_in? && current_user.is_org_admin? then
-	 	@section = Section.new(params[:section])
+	 		@section = Section.new(params[:section])
 	    @section.description = params["section-desc"]
 
 	    respond_to do |format|
@@ -373,7 +380,7 @@ class DmptemplatesController < ApplicationController
 	#create a question
 	def admin_createquestion
     if user_signed_in? && current_user.is_org_admin? then
-	 	@question = Question.new(params[:question])
+	 		@question = Question.new(params[:question])
 	    @question.guidance = params["new-question-guidance-#{params[:section_id]}"]
 	    @question.default_value = params["new-question-default-value-#{params[:section_id]}"]
 

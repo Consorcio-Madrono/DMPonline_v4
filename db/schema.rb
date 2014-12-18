@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140707143840) do
+ActiveRecord::Schema.define(:version => 20131212111049) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -74,11 +74,6 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.boolean  "is_default"
   end
 
-  create_table "dmptemplates_guidance_groups", :id => false, :force => true do |t|
-    t.integer "dmptemplate_id"
-    t.integer "guidance_group_id"
-  end
-
   create_table "exported_plans", :force => true do |t|
     t.integer  "plan_id"
     t.integer  "user_id"
@@ -124,7 +119,7 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.integer  "organisation_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.boolean  "optional_subset"
+    t.boolean  "default"
   end
 
   create_table "guidance_in_group", :id => false, :force => true do |t|
@@ -142,7 +137,6 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "dmptemplate_id"
-    t.integer  "question_id"
   end
 
   create_table "option_warnings", :force => true do |t|
@@ -264,22 +258,15 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.string   "principal_investigator"
     t.string   "principal_investigator_identifier"
     t.string   "data_contact"
-    t.string   "funder_name"
   end
 
   add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true
-
-  create_table "question_formats", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
 
   create_table "questions", :force => true do |t|
     t.text     "text"
     t.string   "question_type"
     t.text     "default_value"
+    t.text     "suggested_answer"
     t.text     "guidance"
     t.integer  "number"
     t.integer  "parent_id"
@@ -291,8 +278,6 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.boolean  "multiple_choice"
     t.boolean  "multiple_permitted"
     t.boolean  "is_expanded"
-    t.boolean  "is_text_field"
-    t.integer  "question_format_id"
   end
 
   create_table "questions_themes", :id => false, :force => true do |t|
@@ -321,19 +306,7 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.integer  "organisation_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.boolean  "published"
   end
-
-  create_table "settings", :force => true do |t|
-    t.string   "var",         :null => false
-    t.text     "value"
-    t.integer  "target_id",   :null => false
-    t.string   "target_type", :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "settings", ["target_type", "target_id", "var"], :name => "index_settings_on_target_type_and_target_id_and_var", :unique => true
 
   create_table "splash_logs", :force => true do |t|
     t.string   "destination"
@@ -356,11 +329,6 @@ ActiveRecord::Schema.define(:version => 20140707143840) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "locale"
-  end
-
-  create_table "themes_in_guidance", :id => false, :force => true do |t|
-    t.integer "theme_id"
-    t.integer "guidance_id"
   end
 
   create_table "user_org_roles", :force => true do |t|

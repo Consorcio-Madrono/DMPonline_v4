@@ -22,8 +22,8 @@
 
 /*******************************
  *  DMPonline v4 stylesheet
- *
- *
+ * 
+ * 
  *  strating date: June 2013
  *******************************/
 
@@ -40,8 +40,8 @@
 @font_size_medium: 13px;
 @font_size_small: 11px;
 @font_colour: #3e3c3c;
-@orange_colour: #F49700;
-@orange_darker_colour: #f47900;
+@orange_colour: #cb0000;
+@orange_darker_colour: #c03333;
 @orange_lighter_colour: #fbb400;
 @grey_colour: #656263;
 @grey_lighter_colour: #827d7e;
@@ -50,11 +50,10 @@
 @background_lighter_colour: #f9f9f9;
 @background_darker_colour: #d1d5d4;
 @green_colour: #114b8b; //#007e30;
-@red_colour: #ec563c;
-@red_lighter_colour: #EE6B54;
+@red_colour: #e3000f;
 @white_colour: #ffffff;
-
-html.dmponline {
+ 
+html {
   /* fallback */
   background-repeat:repeat-y;
   min-height: 100%;
@@ -72,19 +71,19 @@ html.dmponline {
   background-image: linear-gradient(top ,@background_darker_colour , @background_lighter_colour 100% );
   -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d5d4', endColorstr='#f9f9f9', gradientType='0')';
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#d1d5d4', endColorstr='#f9f9f9') ;/*For IE7-8-9*/
-  /*For IE7*/
+  /*For IE7*/ 
   *height: 1%;
-   min-width: 850px;
+   min-width: 800px;
 }
 
-body.dmponline {
+body.dmponline { 
   font-family: @text_font;
   color: @font_colour;
   font-size: @font_size;
-  margin: 0 15% 0 15%;
+  margin: 0 5% 0 5%;
   line-height: 24px;
   min-width: 540px;
-  padding:0 0 0 0;
+  padding:0 0 0 0; 
   background:none;
 }
 
@@ -96,24 +95,24 @@ h1, h2, h3, h4 {
   font-style: normal;
 }
 h1{
-  font-size: 40px;
+  font-size: 40px;  
   line-height:53px;
 }
 
 h2{
-  font-size: 32px;
+  font-size: 32px;  
 }
 
 h3{
-  font-size: 26px;
+  font-size: 26px;  
 }
 
 h4{
-  font-size: @font_size;
+  font-size: @font_size;  
 }
 
 p{
-  font-size: @font_size;
+  font-size: @font_size; 
   font-family: @text_font;
 }
 
@@ -133,7 +132,7 @@ a.visited{
   color: @orange_colour;
 }
 
-a:hover, a.btn:hover, div.nav-project-tabs ul.nav-tabs li a:hover, div#sections-accordion a.accordion-toggle:hover, div.settings-accordion a.accordion-toggle:hover{
+a:hover, a.btn:hover, div.nav-project-tabs ul.nav-tabs li a:hover, div#sections-accordion a.accordion-toggle:hover{
    color: @white_colour !important;
    background-color: none !important;
 }
@@ -156,7 +155,7 @@ header{
   float:left;
   width: 99%;
   }
-
+  
 .main_page_container{
   clear: both;
   float: left;
@@ -177,10 +176,12 @@ input.question_text_field{
 }
 
 footer {
+  color: @white_colour;
+  background-color: @grey_darker_colour;
   clear:both;
   padding: 30px 0 100px 0;
   margin-top: 70px;
-  font-size: @font_size;
+  font-size: @font_size; 
 }
 
 
@@ -213,10 +214,10 @@ footer {
  }
 
 .home_logo{
-  width: 161px;
+  width: 201px;
   height: 99%;
   margin-right:0px;
-
+  padding-top:10px;
 }
 
 /** sign in menu**/
@@ -230,14 +231,14 @@ footer {
   list-style-type: none;
   color: @orange_colour;
   font-size: 130%;
-
+  
 }
 
 .signIn ul li a, .signIn ul li a.active, .signIn ul li a:visited {
   color: @orange_colour;
   text-decoration:underline;
   background-color: none;
-
+  
 }
 .caret {
   display: inline-block;
@@ -280,7 +281,7 @@ footer {
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
-
+  
 
 }
 
@@ -291,17 +292,17 @@ ul#signIn_dropdown{
 
 ul#signIn_dropdown li , ul#signIn_dropdown li a.signIn_dropdown_link,
  ul#signIn_dropdown li a.signIn_dropdown_link:link,
- ul#signIn_dropdown li a.signIn_dropdown_link:active,
+ ul#signIn_dropdown li a.signIn_dropdown_link:active, 
  ul#signIn_dropdown li a.signIn_dropdown_link:visited{
   font-size:17px;
   text-decoration:none;
   font-weight:normal;
   background: @grey_colour !important;
   filter:none;
-  color: @orange_colour;
+  color: @white_colour;
 }
 
-ul#signIn_dropdown li a.signIn_dropdown_link:hover,
+ul#signIn_dropdown li a.signIn_dropdown_link:hover, 
 ul#signIn_dropdown li a.signIn_dropdown_link:focus{
   text-decoration:underline;
   background-color: @grey_colour !important;
@@ -309,7 +310,7 @@ ul#signIn_dropdown li a.signIn_dropdown_link:focus{
   filter: none;
   color: @orange_colour !important;
 }
-
+  
 div.institution_login_link{
   padding-top: 15px;
   font-size: @font_size_medium;
@@ -327,10 +328,10 @@ div.institution_login_link{
   box-shadow: 0 !important;
   -webkit-box-shadow: none !important;
   position: static;
-   filter:none !important;
+   filter:none !important; 
    overflow: visible;
  }
-
+ 
 
 /**  button colour **/
 ul.nav-pills li{
@@ -340,7 +341,7 @@ ul.nav-pills li{
 ul.nav-pills li.last_li{
     margin: 0 0px 20px 0;
 }
-
+   
 ul.nav-pills li a.header_button{
   height: 18px;
   padding: 4px 10px 2px 10px;
@@ -406,36 +407,34 @@ body.dmponline .btn-primary:hover{
 /******   Footer  ******/
 footer{
   clear:both;
-  margin-top: 180px;
+  margin-top: 180px;  
   width: 99%;
 }
 
 footer .left_side_footer{
     float: left;
     clear:both;
-    width: 45%;
-  }
+    width: 43%;
+    margin-left: 18px;
+  } 
   footer .first_row{
     float:left;
-
   }
   footer .second_row{
     clear:both;
     float:left;
   }
-
+   
 footer .right_side_footer{
   float: right;
-  width: 52%;
+  width: 54%;
 }
-
+  
 footer .right_side_footer p{
   float: right;
 }
 
 footer a#footer_right_dcc {
-  width: 60%;
-  float: left;
 }
 footer a#footer_right_jisc {
   width: 38%;
@@ -444,11 +443,11 @@ footer a#footer_right_jisc {
 }
 
 footer img.footer_logo{
-  width:100%;
-  height:100%;
+  max-height:100px;
+  max-width:160px;
 }
-
-//footer left side info
+  
+//footer left side info  
 ul.footer-links {
   margin-left:0px;
 }
@@ -464,25 +463,25 @@ ul.footer-links li {
 }
 
 ul.footer-links li a, ul.footer-links li a:active, ul.footer-links li a:visited {
-  color: @grey_colour;
+  color: @white_colour;
   text-decoration: none;
 }
 
 ul.footer-links li a:hover,  ul.footer-links li a:focus{
-   color: @grey_darker_colour !important;
+   color: @white_colour !important;
    text-decoration:underline;
 }
 
 #dcc_link{
-  color: @grey_colour;
+  color: @white_colour;
 }
 
 #dcc_link a, #dcc_link a:active, #dcc_link a:visited{
     text-decoration: none;
-    color: @grey_colour;
+    color: @white_colour;
 }
 #dcc_link a:hover,  #dcc_link a:focus{
-   color: @grey_darker_colour !important;
+   color: @white_colour !important;
    text-decoration:underline;
   }
 
@@ -498,7 +497,7 @@ ul.footer-links li a:hover,  ul.footer-links li a:focus{
 }
 
 .welcome-message p{
-  color: @orange_colour;
+  color: @grey_darker_colour;
   background-color: none !important;
   font-weight:lighter;
   font-size:20px;
@@ -522,11 +521,12 @@ ul.footer-links li a:hover,  ul.footer-links li a:focus{
   background-color: none !important;
   font-weight: bold;
   text-decoration: none;
+  
+}  
 
-}
-
-
+ 
  .screencast_home_page{
+  min-width: 420px;
    background-color:@white_colour;
   border-color: @white_colour;
   color: @orange_colour;
@@ -538,8 +538,8 @@ ul.footer-links li a:hover,  ul.footer-links li a:focus{
   padding: 15px;
   min-height: 250px;
  }
-
-
+ 
+ 
 /** accordion **/
 
 #homepage-accordion {
@@ -580,14 +580,14 @@ ul.footer-links li a:hover,  ul.footer-links li a:focus{
 }
 
 .minus-laranja:before{
-  content: "\2212";
+  content: "\2212"; 
   float:right;
   background-color: transparent !important;
   line-height: 13px;
   padding-top:0px;
 }
 .plus-laranja:before{
-  content: "+";
+  content: "+"; 
   float:right;
   background-color: transparent !important;
   padding-right:2px;
@@ -604,11 +604,11 @@ ul.footer-links li a:hover,  ul.footer-links li a:focus{
 
 #new_user a.forgot_password, #new_user a.forgot_password:active, #new_user a.forgot_password:visited, #new_user a.forgot_password:hover{
   color: @orange_colour;
-  font-size: @font_size_medium;
+   font-size: @font_size_medium;
 }
 
 li.remember_me_li{
-  margin-top:18px;
+  margin-top:18px;  
 }
 
 li.remember_me_li label{
@@ -622,8 +622,7 @@ li.remember_me_li label{
 }
 
 label.remember_div{
-  display: inline-block;
-  margin: 0 0 4px 12px;
+  margin: 0 5px 4px 12px;
 }
 
 input#user_remember_me, input#user_accept_terms{
@@ -631,40 +630,35 @@ input#user_remember_me, input#user_accept_terms{
   width:10px;
   margin-top:4px;
 }
-
+  
 .sign_up_org_label{
   margin: 0 0 6px 0;
   float:left;
-}
+} 
 
 #s2id_user_organisation_id{
-  min-width:84% !important;
+  min-width:84% !important; 
   clear:both;
   float:left;
   margin: 0 0 10px 0;
 }
-
-#other-org-link {
-  clear:both;
-  padding-bottom:4px;
-}
 /******************************
-        Project  page
+        Project  page 
 *******************************/
 /*** View projects table ***/
 
 table.dmp_table{
   width: 100%;
   border-collapse: separate;
-  border-spacing: 2px;
+  border-spacing: 2px;  
   border-bottom: 0px;
   margin-bottom: 20px;
-
+  
 }
 
 table.dmp_table thead{
   margin: 0px 4px 0px 0px;
-  background-color: @orange_colour;
+  background-color: @grey_darker_colour;
 }
 
 table.dmp_table thead th, table.dmp_table thead td{
@@ -677,7 +671,7 @@ table.dmp_table thead th, table.dmp_table thead td{
 table.dmp_table tbody td{
   background-color: @white_colour;
   color: @font_colour;
-  padding: 4px 4px 4px 15px;
+  padding: 4px 4px 4px 15px;  
 }
 table.dmp_table tbody td.dmp_td_big, table.dmp_table thead th.dmp_th_big{
   width: 32%;
@@ -689,15 +683,14 @@ table.dmp_table tbody td.dmp_td_medium, table.dmp_table thead th.dmp_th_medium{
 }
 table.dmp_table tbody td.dmp_td_small, table.dmp_table thead th.dmp_th_small{
   width: 14%;
-  min-width: 10px;
+  min-width: 10px; 
   //padding-right: 20px;
-  padding: 0 20px;
 }
 
 table.dmp_table tbody th.dmp_th_border{
   font-weight: normal;
   text-align: left;
-  border-spacing: 4px;
+  border-spacing: 4px;  
   border-bottom: 1px solid @grey_very_light_colour;
   border-top: 10x solid @white_colour;
 }
@@ -707,7 +700,7 @@ table.dmp_table tbody th.dmp_th_border p{
 }
 
 table.dmp_table tbody td.dmp_td_border{
-  border-bottom: 1px solid @grey_very_light_colour;
+  border-bottom: 1px solid @grey_very_light_colour; 
   border-left: 1px solid @grey_very_light_colour;
 }
 
@@ -763,7 +756,7 @@ li.select label, li.check_boxes .label{
 #project_guidance_groups_input legend.label label{
   font-weight: bold;
   font-size: 12px;
-
+  
  }
 
 div.select2-container {
@@ -846,113 +839,51 @@ li.choice label input{
 
 #answer_options_input{
   margin-left: 0px;
- padding-left: 0px;
+ padding-left: 0px; 
 }
 
 #answer_options_input .label{
   padding-left: 0px;
   margin-bottom: 10px;
-  text-shadow: none;
+  text-shadow: none;  
 }
 
 ol .choices-group{
   padding-left: 20px;
 }
 
-#other-funder-name .label {
-  background-color: @white_colour;
-  color: @orange_colour;
-  border: 0px;
-  text-shadow: none;
-}
-
-#other-funder-name input {
-  float: right;
-  min-width: 386px;
-}
-
-/*** progress bar mixin ***/
-.ProgressBar (@start_colour, @stop_colour) {
-  background-color: @start_colour;
-  background-image: -moz-linear-gradient(top , @start_colour, @stop_colour 49px);
-  background-image: -webkit-linear-gradient(top , @start_colour, @stop_colour 49px);
-  background-image: -o-linear-gradient(top , @start_colour, @stop_colour 49px);
-  background-image: -ms-linear-gradient(top , @start_colour, @stop_colour 49px);
-  background-image: linear-gradient(top , @start_colour, @stop_colour 49px);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr= @start_colour, endColorstr=  @stop_colour , gradientType='0')";
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr= @start_colour, endColorstr=  @stop_colour) ;/*For IE7-8-9*/
-}
-
 /*** project progress bar ***/
-.progress {
-  height: auto;
-  margin: 8px 0 20px 10%;
+.progress{
+  margin:20px 0 0 10%;
   width: 45%;
-  float: right;
-
-   box-shadow: 7px 7px 2px 0px rgba(168, 168, 168, 0.5);
-  -moz-box-shadow: 7px 7px 2px 0px rgba(168, 168, 168, 0.5);
-  -webkit-box-shadow: 7px 7px 2px 0px rgba(168, 168, 168, 0.5);
-
-  .bar-container{
-    background-color: @white_colour;
-    clear: both;
-    float: left;
-    height: 2em;
-    position: relative;
-    text-align: left;
-    width: 100%;
-
-
-    & > span:first-child  {
-      height: 100%;
-      color: @grey_lighter_colour;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    & > span {
-      font-size: 12px;
-      padding-top: 2px;
-      overflow: auto;
-      left: 0;
-      text-indent: 1em;
-      position: absolute;
-      text-align: left !important;
-      top: 0;
-      z-index: 1;
-    }
-  }
-
-  .bar {
-    .ProgressBar(@orange_colour, @orange_darker_colour);
-  }
-
-  .bar.space {
-    .ProgressBar(@orange_lighter_colour, @orange_colour);
-
-  }
-
-  .bar.full {
-    .ProgressBar(@red_lighter_colour, @red_colour);
-   }
-
-   .bar-full-text {
-    color: @white_colour !important;
-  }
-
-
-  hr {
-    float: left;
-    margin: 0 10px -1px 0;
-    width: 100%;
-  }
-
- .color-text{
-    color: @orange_colour;
-    padding-left: 15px;
-  }
+  float:right;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  box-shadow: 4px 5px 20px 3px rgba(168, 168, 168, 0.73);
+  -moz-box-shadow: 4px 5px 20px 3px rgba(168, 168, 168, 0.73);
+  -webkit-box-shadow: 4px 5px 20px 3px rgba(168, 168, 168, 0.73);
 }
+
+.progress .bar{
+  background-color: @orange_colour;
+  padding-left: 1px; 
+  background-image: -moz-linear-gradient(top , @orange_colour, @orange_darker_colour 49px);
+  background-image: -webkit-linear-gradient(top , @orange_colour, @orange_darker_colour 49px);
+  background-image: -o-linear-gradient(top , @orange_colour, @orange_darker_colour 49px);
+  background-image: -ms-linear-gradient(top , @orange_colour, @orange_darker_colour 49px);
+  background-image: linear-gradient(top , @orange_colour, @orange_darker_colour 49px);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr= @orange_colour, endColorstr=  @orange_darker_colour , gradientType='0')";
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr= @orange_colour, endColorstr=  @orange_darker_colour) ;/*For IE7-8-9*/
+  
+} 
+
+.progress .color-text{
+  color: @orange_colour;
+  padding-left: 15px; 
+} 
+
 
 /*** project nav tabs ***/
 .nav-project-tabs{
@@ -961,7 +892,7 @@ ol .choices-group{
 .nav li a{
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-
+  
 }
 
 #project-tabs ul{
@@ -970,11 +901,11 @@ ol .choices-group{
 
 #project-tabs li a{
   background-color: @white_colour;
-  color: @grey_very_light_colour;
+  color: @grey_darker_colour;
   font-weight: bold;
   padding: 4px 20px 4px 20px;
   text-decoration: none !important;
-}
+}  
 
 #project-tabs li.active a, #project-tabs li.active a:active, #project-tabs li a:hover{
   background-color: @orange_colour;
@@ -1005,7 +936,7 @@ ol .choices-group{
 .project-title-edit h5{
    font-weight:normal;
 }
-
+ 
 
 .dmp_details_body{
   background-color: @white_colour;
@@ -1035,9 +966,9 @@ ol .choices-group{
 
 .div_right{
   float:right;
-  width:25%;
+  width:28%;
   padding:0 2px 10px 0;
-
+  
   .btn{
     float:right;
     margin:0 0 0 4px;
@@ -1069,12 +1000,12 @@ table.dmp_details_table tr td.first{
 
 table.dmp_details_table .text_area{
   width: 90%;
-}
+} 
 
 table.dmp_details_table .text_field{
   height: 17px;
   margin-bottom:5px;
-}
+} 
 
 .edit-project .actions{
   margin-top: 0px;
@@ -1084,47 +1015,44 @@ table.dmp_details_table .text_field{
   clear:both;
 }
 
-#project-accordion {
-  & > .accordion-group {
-    background-color:@white_colour;
-    border-color: @white_colour;
-    border:none !important;
-    box-shadow:none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow:none !important;
+#project-accordion .accordion-group{
+  background-color:@white_colour;
+  border-color: @white_colour;
+  border:none !important;
+  box-shadow:none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow:none !important;
+} 
 
-    & > .accordion-heading {
-      background-color:@white_colour;
-      border-bottom: 1px solid @orange_colour;
-      min-height: 50px;
+#project-accordion .accordion-heading{
+  background-color:@white_colour;
+  border-bottom: 1px solid @orange_colour;
+  min-height: 50px;
+}
 
-      a {
-        padding-left:0px;
-        padding-right:0px;
-      }
-
-      h3 {
-        float: left;
-        margin-top: 0px;
-        min-width:100%;
-      }
-
-      span {
-        margin: 7px;
-      }
-    }
-  }
-
-  .accordion-project {
-    clear: both;
-  }
-
-  .accordion-inner {
-    border:none !important;
-    padding-right: 0px;
+#project-accordion .accordion-heading a{
     padding-left:0px;
-  }
+    padding-right:0px;
+}
 
+ #project-accordion .accordion-heading h3{
+  float: left;
+  margin-top: 0px;
+  min-width:100%;
+}
+
+#project-accordion .accordion-heading span{
+  margin: 7px;
+}
+
+#project-accordion .accordion-project{
+ clear:both;
+}
+
+#project-accordion .accordion-inner{
+ border:none !important;
+ padding-right: 0px;
+ padding-left:0px;
 }
 
 .project-hide {
@@ -1145,11 +1073,11 @@ table.dmp_details_table .text_field{
 .new-line-tabs{
   margin: 5px 0 10px;
   border-top: 2px solid #e9eaea;
-
+  
 }
 
 ul.section_ul {
-  list-style-type: none;
+  list-style-type: none; 
   margin-left:0px;
 }
 
@@ -1158,7 +1086,7 @@ ul.section_ul li{
  }
 
 ul.question_ul{
-  list-style-type: none;
+  list-style-type: none; 
    margin-bottom: 15px;
    margin-left:0px;
 }
@@ -1170,7 +1098,7 @@ ul.question_ul li{
 
 /*** Accordion  css ***/
 .accordion-group{
-  background-color: @orange_colour;
+  background-color: @grey_darker_colour;
   border-color:@orange_colour;
   border-radius: 1px;
   margin-bottom: 5px;
@@ -1180,7 +1108,7 @@ ul.question_ul li{
 }
 
 .accordion-heading{
-  background-color: @orange_colour;
+  background-color: @grey_darker_colour;
 
 }
 
@@ -1200,14 +1128,14 @@ ul.question_ul li{
 .accordion-icon{
   width:2%;
   float:right;
-  padding-top:5px;
+   padding-top:11px;
  }
 
 .accordion-body{
   clear:both;
 }
 .section-status{
-  background-color: @orange_colour;
+  background-color: @grey_darker_colour;
 }
 
 .accordion-inner{
@@ -1216,6 +1144,9 @@ ul.question_ul li{
 
 #sections-accordion {
   .question-div {
+    .label {
+      background-color: @grey_darker_colour;
+    }
     float:left;
     width:60%;
   }
@@ -1225,7 +1156,7 @@ ul.question_ul li{
     width:35%;
   }
   label {
-    font-size: 14px;
+    font-size: 14px;  
     font-weight:normal;
   }
   .guidance_header {
@@ -1274,7 +1205,7 @@ span.suggested-answer-intro{
   box-shadow:none !important;
   -moz-box-shadow: none !important;
   -webkit-box-shadow:none !important;
-}
+} 
 
 .question-guidance .accordion-heading{
   background-color:@white_colour;
@@ -1284,14 +1215,14 @@ span.suggested-answer-intro{
   border: 1px solid @orange_colour;
   clear:both;
 }
-
+ 
 .question-guidance .guidance-accordion-body ul{
-  font-size: @font_size;
+  font-size: @font_size;  
   list-style:none;
   margin-left:0;
   padding-left:1em;
 }
-.question-guidance .guidance-accordion-body ul li:before{
+.question-guidance .guidance-accordion-body ul li:before{ 
    display:inline-block;
     content:"\2212";
     width:1em;
@@ -1337,7 +1268,7 @@ span.suggested-answer-intro{
 }
 
 .mce-panel i.mce-ico{
-  font-size: @font_size;
+  font-size: @font_size;  
   font-weight:normal;
 }
 
@@ -1353,7 +1284,7 @@ div {
 
 .field_with_errors input {
   border-color: red;
-
+  
 }
 
 #error_explanation {
@@ -1388,11 +1319,11 @@ div {
 
 ul.export_list li{
   padding-bottom: 5px;
-
+  
   ul.export_sub_list {
     list-style:none;
     margin-left: 14px;
-
+    
     li:before {
       display:inline-block;
       color: @orange_colour;
@@ -1400,10 +1331,10 @@ ul.export_list li{
       width:1em;
       margin-left:-1em;
     }
-
+    
     li {
       padding-bottom: 5px;
-    }
+    } 
   }
 }
 
@@ -1411,7 +1342,7 @@ ul.export_list li{
 
 /************ Static pages **********/
 
-// help page
+// help page 
 
 ul.help_ul li{
   padding-bottom:12px;
@@ -1424,15 +1355,15 @@ ul.help_ul li{
 .column_left{
   float:left;
   width:50%;
-  margin: 2px 5px 0 0;
+  margin: 2px 5px 0 0; 
   .white_background{
     min-height: 465px;
-
+    
       table.dmp_details_table tr td{
       padding-left: 10px;
       min-width:94px;
     }
-
+    
     table.dmp_details_table tr td.first{
       border-right: 1px solid @orange_colour;
       padding-right: 15px;
@@ -1449,13 +1380,13 @@ ul.help_ul li{
 .column_right{
   float:left;
   width:48%;
-
-  margin: 2px 0 0 5px;
-
-
+ 
+  margin: 2px 0 0 5px; 
+  
+  
   .white_background{
     min-height: 465px;
-
+    
   }
 }
 
@@ -1466,7 +1397,7 @@ ul.help_ul li{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 20px 20px 20px 20px;
-
+  
   ul{
     list-style-type: none;
     margin-left:0px;
@@ -1478,12 +1409,6 @@ ul.help_ul li{
 #tinymce,.mce-content-body {
 	background-color: @white_colour !important;
 	padding: 2px;
-    width: 100%;
-  ul {
-    list-style: disc outside;
-    margin: 0 0 10px 25px;
-  }
-
 }
 
 .mce-item-table {
@@ -1491,7 +1416,6 @@ ul.help_ul li{
 	font-size: 10pt;
 	max-width: 500px;
 }
-
 
 .mce-item-table th, .mce-item-table td {
 	border: 1px solid black !important;
@@ -1503,222 +1427,3 @@ ul.help_ul li{
 	font-weight: normal;
 	background-color: @orange_colour;
 }
-
-/* My plans toolbar */
-.dmp_toolbar {
-  background-color: @orange_colour;
-  height: 34px;
-  margin-left: 2px;
-  margin-right:2px;
-  padding: 4px 2px 4px 2px;
-  text-align: right;
-  border-spacing: 2px;
-  vertical-align: center;
-  
-
-  form#filter_form {
-    background-color: @white_colour;
-    border-radius: 3px;
-    display: inline-block;
-    height: auto;
-    overflow: hidden;
-    padding: 2px;
-    width: 50%;
-
-    #filter {
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      -webkit-box-shadow: none;
-      margin: 0;
-      outline: none;
-      padding: 4px 0 0 4px;
-      float: left;
-      width: 70%;
-    }
-  }
-
-  .btn-configure {
-    color: @white_colour;
-    float: right;
-    height: 100%;
-    line-height: 250%;
-    margin-left: @font_size / 2;
-    margin-right: 4px;
-    width:15px;
-    text-decoration: none !important;
-
-    &:hover{
-      color: @white_colour !important;
-      
-    }
-  }
-
-  a:focus,
-  a:active,
-  a:hover {
-    text-decoration: none !important;
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .dmp_toolbar{
-        margin-right:3px;
-        }
-}
-
-/* tablesorter */
-table.tablesorter thead  {
-  th.header {
-    cursor: pointer;
-    background: url('/assets/bg.gif') no-repeat center right;
-  }
-
-  th.headerSortDown {
-    background: @orange_lighter_colour url('/assets/desc.gif') no-repeat center right;
-  }
-
-  th.headerSortUp {
-    background: @orange_lighter_colour url('/assets/asc.gif') no-repeat center right;
-  }
-}
-
-/* export format selection form */
-
-form#select-form-format {
-  input {
-    margin-bottom:10px;
-  }
-}
-
-/* export formatting settings form */
-
-form.new_export,
-form.edit_export {
-  background-color: @white_colour;
-  border-radius: 5px;
-  padding: 1em;
-
-  & > fieldset > legend {
-
-    label {
-      display: inline-block;
-      width: 90%;
-      font-size: 21px;
-      line-height: 40px;
-      color: #333;
-    }
-
-    input[type=checkbox] { margin-left: 0 !important; }
-  }
-
-
-  fieldset {
-    display: inline-block;
-    width: 47.5%;
-    vertical-align: top;
-
-    div {
-      display: inline-block;
-      width: auto;
-
-      label {
-        font-size: 0.8em;
-        text-align: center;
-      }
-
-      select {
-        text-align: center;
-        width: auto;
-      }
-    }
-
-    ol {
-      margin: 0 5% 0 0;
-
-      li {
-        display: block;
-        list-style-type: none;
-        line-height: 1em;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        width: 100%;
-
-        & > fieldset {
-          display: block;
-          width: 100%;
-
-          legend {
-            border: none;
-            font-size: 1em;
-            line-height: 1em;
-            height: 1.5em;
-            margin: 0;
-            padding: 0;
-
-            label { font-weight: bold; }
-          }
-
-          ol {
-            border-bottom: 1px solid @grey_very_light_colour;
-            margin: 0 0 0.5em 0;
-            padding: 0 0 0.5em 0;
-          }
-
-          li {
-            height: auto;
-            label { text-indent: 5%; }
-          }
-        }
-
-        &:last-child fieldset ol { border-bottom: none; }
-      }
-
-      label {
-        display: inline-block;
-        margin: 0;
-        overflow: hidden;
-        position: absolute;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 90%;
-        top: 0; left: 0;
-      }
-
-    }
-
-    input[type=checkbox] { margin-left: 95%; }
-
-    h4 {
-      margin-top: 0;
-      text-align: center;
-    }
-
-    &.font {
-      & > div {
-        width: 82.5%;
-
-        select { width: 100%; }
-      }
-
-      & > div:nth-child(2n + 1) { width: 15%; }
-    }
-
-    &.margins {
-      div {
-        width: 24%;
-
-        select { width: 100%; }
-      }
-    }
-  }
-
-  input[type=submit] { margin-top: 1em; }
-}
-
-.modal form.new_export fieldset,
-.modal form.edit_export fieldset { width: 100%; }
-
-.settings-accordion span.plus-laranja:before,
-.settings-accordion span.minus-laranja:before { line-height: inherit; }

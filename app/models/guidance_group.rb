@@ -28,6 +28,7 @@ class GuidanceGroup < ActiveRecord::Base
 				excluded_org_ids << org.id
 			end
 			return_orgs =  GuidanceGroup.where("organisation_id NOT IN (?)", excluded_org_ids)
+			logger.debug("GUIDANCE GROUPS: #{return_orgs.inspect}")
 			return return_orgs
 		end
 		

@@ -1,5 +1,5 @@
-<p>Welcome to DMPonline, <%= @email %>!</p>
+<p>¡Bienvendio a DMPonline, <%= @email %>!</p>
 
-<p>Thank you for registering at <%= link_to 'DMPonline', root_url %>. Please confirm your email address:</p>
+<p>Gracias por registrate en <%= link_to 'DMPonline', root_url %>. Porfavor, confirma tu dirección de e-mail:</p>
 
-<p><%= link_to 'Click here to confirm your account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %> (or copy <%= confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %> into your browser).</p>
+<p><%= link_to 'Pincha aquí para confirmar tu nueva cuenta', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %> (o copia <%= confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %> en tu navegador).</p>

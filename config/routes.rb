@@ -8,13 +8,13 @@ DMPonline4::Application.routes.draw do
   
   # WAYFless access point - use query param idp
   get 'auth/shibboleth' => 'users/omniauth_shibboleth_request#redirect', :as => 'user_omniauth_shibboleth'
-  get 'auth/shibboleth/assoc' => 'users/omniauth_shibboleth_request#associate', :as => 'user_shibboleth_assoc'
+	get 'auth/shibboleth/assoc' => 'users/omniauth_shibboleth_request#associate', :as => 'user_shibboleth_assoc'
   
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'
 
-  ActiveAdmin.routes(self)
+	ActiveAdmin.routes(self)
   
   get "about_us" => 'static_pages#about_us', :as => "about_us"
   get "help" => 'static_pages#help', :as => "help"
@@ -95,15 +95,17 @@ DMPonline4::Application.routes.draw do
 			put 'admin_updatesuggestedanswer'
   	end
   end
-   
+  
+  
+  
   resources :phases
   resources :versions
   resources :sections
   resources :questions
   resources :question_themes
-
   
   resources :themes
+  
   
   resources :answers
   resources :plan_sections
@@ -123,12 +125,10 @@ DMPonline4::Application.routes.draw do
 			get 'section_answers'
 		end
 	end
-	
 	member do
 		get 'share'
 		get 'export'
 		post 'invite'
-		post 'create'
 	end
 	collection do
 		get 'possible_templates'
@@ -152,11 +152,6 @@ DMPonline4::Application.routes.draw do
  
   resources :file_types
   resources :file_uploads
-
-  namespace :settings do
-    resource :projects
-    resources :plans
-  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
