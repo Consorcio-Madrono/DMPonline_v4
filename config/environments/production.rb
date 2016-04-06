@@ -35,10 +35,10 @@ DMPonline4::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  #config.force_ssl = false
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :debug
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -72,9 +72,9 @@ DMPonline4::Application.configure do
 	 # Error notifications by email
 	 config.middleware.use ExceptionNotification::Rack,
 	  :email => {
-	    :email_prefix => "[DMPonline4 ERROR] ",
-	    :sender_address => %{"No-reply" <noreply@dcc.ac.uk>},
-	    :exception_recipients => %w{dmponline@dcc.ac.uk}
+	    :email_prefix => "[ERROR de PGDonline] ",
+	    :sender_address => %{"No-reply" <noreply@consorciomadrono.es>},
+	    :exception_recipients => %w{webmaster@consorciomadrono.es}
 	  }
 
   # Log the query plan for queries taking more than this (works

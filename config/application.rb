@@ -32,7 +32,7 @@ module DMPonline4
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :es
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -71,19 +71,19 @@ module DMPonline4
     config.autoload_paths += %W(#{config.root}/lib)
 
     # Set the default host for mailer URLs
-    config.action_mailer.default_url_options = { :host => 'dmponline.example.com' }
-    config.active_record.whitelist_attributes = true
+    config.action_mailer.default_url_options = { :host => '193.147.72.194' }
+    config.active_record.whitelist_attributes = false
 
      # Enable shibboleth as an alternative authentication method
     # Requires server configuration and omniauth shibboleth provider configuration
     # See config/initializers/omniauth.rb
-    config.shibboleth_enabled = true
+    config.shibboleth_enabled = false
 
     # Absolute path to Shibboleth SSO Login
     config.shibboleth_login = 'https://localhost/Shibboleth.sso/Login'
 
     WickedPdf.config = {
-	  :exe_path => '/usr/local/bin/wkhtmltopdf'
+	  :exe_path => '/home/juan/desarrollo/newsletter/wkhtmltopdf-amd64'
 	}
 
   end
