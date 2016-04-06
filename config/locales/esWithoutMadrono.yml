@@ -33,12 +33,12 @@ es:
     am: "am"
     pm: "pm"
 
-  tool_title: "PGDonline"
-  dmponline3_text: "Versión anterior de DMPonline"
+  tool_title: "DMPonline"
+  dmponline3_text: "Versión anterior de DMPonline" 
   dcc_name: "Digital Curation Centre"
   welcome_title: "Bienvenido/a."
-  welcome_text: "<p>PGDonline ha sido desarrollado por el <a href='http://dcc.ac.uk' target='_blank'>Digital Curation Centre</a> y adaptado por el <a href='http://www.consorciomadrono.es' target='_blank'>Consorcio Madroño</a> como herramienta para elaborar planes de gestión de datos.</p>"
-  screencast_text: "Video sobre cómo usar PGDonline"
+  welcome_text: "<p>DMPonline ha sido desarrollado por el <a href='http://dcc.ac.uk' target='_blank'>Digital Curation Centre</a> como una herramienta para elaborar planes de gestión de datos.</p>"
+  screencast_text: "Video sobre cómo usar DMPonline"
   screencast_error_text: "El navegador no soporta la etiqueta video."
 
   admin:
@@ -266,7 +266,7 @@ es:
       delete_message: "Va a eliminar '%{question_text}'. ¿Está seguro?"
       question_options_help_text_html: "Introduzca las opciones que quiere mostrar. Si quiere que una opción esté seleccionada por defecto, marque la casilla correspondiente."
 
-
+ 
 
 
   helpers:
@@ -285,7 +285,7 @@ es:
     sign_in: "Conectar"
     sign_out: "Desconectar"
     sign_up: "Registrarse"
-    sign_up_text: "¿Nuevo en PGDonline? Regístrese ya."
+    sign_up_text: "¿Nuevo en DMPonline? Regístrese ya."
     signed_in: "Registrado como "
     institution_sign_in_link: "O conectar con sus credenciales institucionales"
     institution_sign_in: " (sólo usuarios del Reino Unido)"
@@ -311,7 +311,7 @@ es:
     send_password_info: "Reiniciar las instrucciones de la clave"
     edit_password_info: "Si quiere cambiar su clave, por favor, rellene los siguientes campos."
     accept_terms_html: " Acepto los <a href='/terms'>términos y condiciones</a> *"
-
+ 
     text_area: "Text area"
     text_field: "Text field"
     radio_buttons: "Radio buttons"
@@ -356,15 +356,15 @@ es:
     owner: "Propietario"
     orcid_id: "Número ORCID"
     orcid_html: "El número ORCID es un identificador digital persistente que identifica a cada investigador, <a href='http://orcid.org/content/initiative' target='_blank' rel='external' class='a_orange'>más información</a>."
-    sign_up_shibboleth_alert_text_html: "PGDonline no reconoce las credenciales de su institución - o usted no ha creado una cuenta con con nosotros o no ha vinculado los detalles de la cuenta en PGDonline con la cuenta de su institución. </br>
-     --> Si usted <strong>no tiene</strong> una cuenta en PGDonline, por favor, rellene el siguiente formulario.</br>
-     --> Si usted <strong>tiene</strong> una cuenta en PGDonline, por favor <a href='#header-login-form' data-toggle='modal' class='a_orange'>Identifíquese</a> de forma que podamos vincular su cuenta con las credenciales de su institución.</br>
+    sign_up_shibboleth_alert_text_html: "DMPonline no reconoce las credenciales de su institución - o usted no ha creado una cuenta con con nosotros o no ha vinculado los detalles de la cuenta en DMPonline con la cuenta de su institución. </br>
+     --> Si usted <strong>no tiene</strong> una cuenta en DMPonline, por favor, rellene el siguiente formulario.</br>
+     --> Si usted <strong>tiene</strong> una cuenta en DMPonline, por favor <a href='#header-login-form' data-toggle='modal' class='a_orange'>Identifíquese</a> de forma que podamos vincular su cuenta con las credenciales de su institución.</br>
     Una vez ha creado y/o vinculado su cuenta, podrá identificarse con las credenciales de su institución directamente."
     shibboleth_linked_text: "Su cuenta enstá vinculada con las credenciales de su institución."
-    shibboleth_to_link_text: "Vincule su cuenta de PGDonline con las credenciales de su institución (Sólo para usuarios del Reino Unido)"
+    shibboleth_to_link_text: "Vincule su cuenta de DMPonline con las credenciales de su institución (Sólo para usuarios del Reino Unido)"
     shibboleth_unlink_label: "Desvincule las credenciales de su institución"
     shibboleth_unlink_alert: "Desvincule las alertas relacionadas con las credenciales de su institución"
-    shibboleth_unlink_dialog_text: "<p>Va a desvincular PGDonline de las credenciales de su institución, ¿Quiere continuar?</p>"
+    shibboleth_unlink_dialog_text: "<p>Va a desvincular DMPonline de las credenciales de su institución, ¿Quiere continuar?</p>"
 
 
     section_label: "Sección"
@@ -468,7 +468,7 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
       share:
         tab_share: "Compartir"
         shared_label: "Compartido?"
-        share_text_html: "<p>Aquí puede dar a otras personas acceso a su plan. Hay tres niveles de permiso.<ul><li>Los usuarios con acceso de \"sólo lectura\" sólo pueden leer el plan.</li><li>Los Editores pueden contribuir al plan.</li><li>Los Co-propietarios pueden también contribuir, editar los detalles y controlar el acceso al plan.</li></ul></p><p>Añada cada colaborador individualmente introduciendo su dirección de correo electrónico, seleccionando un nivel de permiso y haciendo clic en \"Añadir colaborador\".</p><p>Aquellos a quienes invite recibirán un aviso por correo electrónico indicando que tienen acceso al plan e invitándoles a registrarse en PGDonline si no tienen ya una cuenta. También se envia un aviso si se cambia el nivel de permiso de un usuario.</p>"
+        share_text_html: "<p>Aquí puede dar a otras personas acceso a su plan. Hay tres niveles de permiso.<ul><li>Los usuarios con acceso de \"sólo lectura\" sólo pueden leer el plan.</li><li>Los Editores pueden contribuir al plan.</li><li>Los Co-propietarios pueden también contribuir, editar los detalles y controlar el acceso al plan.</li></ul></p><p>Añada cada colaborador individualmente introduciendo su dirección de correo electrónico, seleccionando un nivel de permiso y haciendo clic en \"Añadir colaborador\".</p><p>Aquellos a quienes invite recibirán un aviso por correo electrónico indicando que tienen acceso al plan e invitándoles a registrarse en DMPonline si no tienen ya una cuenta. También se envia un aviso si se cambia el nivel de permiso de un usuario.</p>"
         collaborators: "Colaboradores"
         add_collaborator: "Añadir colaborador"
         add: "Añadir"
@@ -514,7 +514,7 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
       export:
         pdf:
           question_not_answered: Pregunta no respondida.
-          generated_by: Este documento fue generado por PGDonline (http://pgd.consorciomadrono.es)
+          generated_by: Este documento fue generado por DMPonline (http://dmponline.dcc.ac.uk)
         space_used: "aprox. %{space_used}% de disponibilidad del espacio usado (máx. %{num_pages} páginas)"
         project_name: "Nombre del Proyecto"
         project_identifier: "Identificador del Proyecto"
@@ -562,32 +562,32 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
           invalid_max_pages: "Número de páginas inválido"
 
   about_page:
-    title: "Sobre PGDonline"
+    title: "Sobre DMPonline"
     tab_1: "Antecedentes"
     tab_2: "Últimas noticias"
 
     body_text_tab_1_html: "
-    <p>Los organismos de financiación exigen, cada vez con más frecuencia, que sus beneficiarios produzcan Planes de Gestión de Datos que abarquen desde la fase inicial de preparación de la propuesta hasta después de  la obtención de la financiación. El Digital Curation Centre en el Reino Unido creó DMPonline para ayudar a los equipos de investigación a responder a este requisito y el Consorcio Madroño junto con sus universidades miembro lo han adaptado a las necesidades de los proyectos con esta exigencia en España.</p>
+    <p>Los organismos de financiación exigen, cada vez con más frecuencia, que sus beneficiarios produzcan Planes de Gestión de Datos que abarquen desde la fase inicial de preparación de la propuesta hasta después de  la obtención de la financiación. El Digital Curation Centre en el Reino Unido creó DMPonline para ayudar a los equipos de investigación a responder a este requisito.</p>
     <p>El <a href='http://www.dcc.ac.uk/' target='_blank'>DCC</a> [en inglés] ha trabajado de cerca con organismos financiadores y universidades para desarrollar una herramienta que ayude a los investigadores a generar un plan de gestión de datos (PGD) eficaz que responda al ciclo de vida completo del proyecto, desde la etapa de preparación de la propuesta hasta su terminación.</p>
     </div>
     <h3>Cómo empezar</h3>
     <div class='white_background'>
     <p>Si tiene una cuenta, por favor, identifíquese y comience a crear o editar su PGD.</p>
-    <p>Si no tiene una cuenta PGDonline, haga clic en <a href='/'>'Registrarse'</a> en la página principal.</p>
+    <p>Si no tiene una cuenta DMPonline, haga clic en <a href='/'>'Registrarse'</a> en la página principal.</p>
     <p>Por favor, visite la página de <a href='/help'>'Ayuda'</a> para orientarse.</p>
     </div>
     <h3>Información adicional</h3>
     <div class='white_background'>
-    <p>Estamos mejorando constantemente la interfaz de usuario y las funcionalidades de PGDonline.
+    <p>Estamos mejorando constantemente la interfaz de usuario y las funcionalidades de DMPonline.
     Si quiere contribuir con comentarios y sugerencias, por favor contacte con nosotros por correo electrónico en
-    <a href='mailto:e-ciencia@madrimasd.org?Subject=PGDonline%20inquiry' target='_top'>e-ciencia@madrimasd.org</a>.</p>
+    <a href='mailto:dmponline@dcc.ac.uk?Subject=DMPonline%20inquiry' target='_top'>dmponline@dcc.ac.uk</a>.</p>
     <p>Si quisiera acceder a la versión original de DMPonline, por favor visite <a href='https://dmponline.dcc.ac.uk' target='_top'>DMPonline</a> [en inglés].</p>"
 
   body_text_tab_2_html: "<p>Noticias de DMPonline desde el portal web del DCC</p></br>"
 
   help_page:
     title: "Ayuda"
-    tab_1: "Sobre PGDonline"
+    tab_1: "Sobre DMPonline"
     tab_2: "Sobre la planificación de la gestión de datos"
     body_text_tab_2_html: "<h3>Recursos útiles sobre Planificación de Gestión de Datos</h3>
       <ul class='help_ul'>
@@ -601,7 +601,7 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
         </li>
         <li>
           <a target='_blank' href='http://www.dcc.ac.uk/sites/default/files/documents/resource/DMP_Checklist_2013.pdf'>DCC Checklist for a Data Management Plan</a> [PDF, 3 páginas, en inglés]<br />
-  Un listado de 13 preguntas y documentación orientativa relacionada que representan los temas principales que surgen en los Planes de Gestión y Compartición de Datos. Esta lista de comprobación se usa como plantilla genérica en PGDonline y se presenta cuando no se pueden aplicar requisitos de un organismo financiador concreto al usuario.
+  Un listado de 13 preguntas y documentación orientativa relacionada que representan los temas principales que surgen en los Planes de Gestión y Compartición de Datos. Esta lista de comprobación se usa como plantilla genérica en DMPonline y se presenta cuando no se pueden aplicar requisitos de un organismo financiador concreto al usuario.
         </li>
         <li>
           <a target='_blank' href='http://www.dcc.ac.uk/sites/default/files/documents/publications/reports/guides/How%20to%20Develop.pdf'>How to develop a Data Management and Sharing Plan</a> [PDF, 8 páginas, en inglés]<br />Una guía del Digital Curation Centre que resume los requerimientos típicos de los organismos financiadores para PGDs y los tipos de consideraciones que realizar al responder.
@@ -669,7 +669,7 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
   Un curso de formación en línea diseñado para investigadores y otras personas que pretendan gestionar datos digitales como parte del proceso de investigación. El curso incluye varias prácticas en el uso de software SPSS, R, ArcGIS y NVivo.
       </li>
     </ul>"
-    body_text_tab_1_html: "<p>Cuando se identifique en PGDonline será redirigido a la página 'Mis Planes'. Desde ahí puede editar, compartir, exportar o borrar cualquiera de sus planes. También verá los planes que otros hayan compartido con usted.</p>
+    body_text_tab_1_html: "<p>Cuando se identifique en DMPonline será redirigido a la página 'Mis Planes'. Desde ahí puede editar, compartir, exportar o borrar cualquiera de sus planes. También verá los planes que otros hayan compartido con usted.</p>
     <h3>Crear un plan</h3>
     <p>Para crear un plan, haga clic en el botón 'Crear un plan' desde la página 'Mis planes' o desde el menú superior.</p>
     <h3>Escribir su plan</h3>
@@ -687,78 +687,96 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
     <p>Añada la dirección de correo electrónico de cualquier colaborador al que quiera invitar a leer o editar su plan. Configure el nivel de permisos que quiera proporcionarles a través de las opciones desplegables y haga clic en 'Añadir colaborador'</p>
     <p>Si lo desea puede dejar una nota con comentarios para sus colaboradores. En cualquier momento podrá eliminar el acceso o actualizar el nivel de permisos proporcionados previamente.</p>
     <h3>Exportar planes</h3>
-    <p>Desde aquí puede descargar el plan en varios formatos. Esto puede ser útil si necesita enviar el plan como parte de una solicitud de subvención. Elija el formato en el que quiera ver/descargar el plan y haga clic en exportar. Cuando se identifique en PGDonline se le enviará a la página 'Mis planes'. Desde allí puede editar, compartir, exportar o borrar cualquiera de sus planes. También verá los planes que otros hayan compartido con usted.</p>"
+    <p>Desde aquí puede descargar el plan en varios formatos. Esto puede ser útil si necesita enviar el plan como parte de una solicitud de subvención. Elija el formato en el que quiera ver/descargar el plan y haga clic en exportar. Cuando se identifique en DMPonline se le enviará a la página 'Mis planes'. Desde allí puede editar, compartir, exportar o borrar cualquiera de sus planes. También verá los planes que otros hayan compartido con usted.</p>"
 
 
   contact_page:
     title: "Contactar con nosotros"
-    intro_text_html: "<p>PGDonline es una adaptación de la herramienta <a href='http://dmponline.dcc.ac.uk'>DMPonline</a> desarrollada por el Consorcio Madroño y sus universidades miembro. Si quiere realizar alguna consulta sobre PGDonline, por favor, incluya su pregunta en el formulario de abajo o envíe un mensaje de correo electrónico a <a href='mailto:e-ciencia@madrimasd.org?Subject=PGDonline%20inquiry' target='_top'>e-ciencia@madrimasd.org</a>.</p>"
-    github_text_html: "<p>Si quiere pedir nuevas funcionalidades o encuentra algún bug, puede mirar la <a href='https://github.com/Consorcio-Madrono/DMPonline_v4/issues?state=open'>lista de incidencias en GitHub</a>. Si su incidencia no se encuentra aquí, puede añadirla. En este caso, añada un comentario si tiene más información o díganos la importancia que tiene para usted. Sus comentarios nos ayudaran a establecer las prioridades de futuros desarrollos.</p>"
+    intro_text_html: "<p>DMPonline es una herramienta desarrollada por el Digital Curation Centre. Tiene más einformación sobre nosotros en nuestro <a href='http://www.dcc.ac.uk/' target='_blank'>portal web</a . Si quiere realizar alguna consulta sobre DMPonline, por favor, incluya su pregunta en el formulario de abajo o envíe un mensaje de correo electrónico a <a href='mailto:dmponline@dcc.ac.uk?Subject=DMPonline%20inquiry' target='_top'>dmponline@dcc.ac.uk</a>.</p>"
+    github_text_html: "<p>Si quiere pedir nuevas funcionalidades o encuentra algún bug, puede mirar la <a href='https://github.com/DigitalCurationCentre/DMPonline_v4/issues?state=open'>lista de incidencias en GitHub</a>. Si su incidencia no se encuentra aquí, puede añadirla. En este caso, añada un comentario si tiene más información o díganos la importancia que tiene para usted. Sus comentarios nos ayudaran a establecer las prioridades de futuros desarrollos.</p>"
     address_text_html: "<ul>
-      <li>Biblioteca del Campus de Móstoles</li>
-      <li>Universidad Rey Juan Carlos</li>
-      <li>C/ Tulipán, s/n</li>
-      <li>28933 - Móstoles (Madrid)</li>
-      <li>España</li>
+      <li>Digital Curation Centre</li>
+      <li>Level 7, Appleton Tower</li>
+      <li>Crichton Street</li>
+      <li>Edinburgh</li>
+      <li>EH8 9LE</li>
+      <li>UK</li>
      </ul>
-     <p>Tel. +34 914 887 060</p>
-     <p>Email <a href='mailto:e-ciencia@madrimasd.org?Subject=PGDonline%20inquiry' target='_top'>e-ciencia@madrimasd.org</a></p>"
+     <p>Tel. +44 (0) 131 651 1239</p>
+     <p>Email <a href='mailto:dmponline@dcc.ac.uk?Subject=DMPonline%20inquiry' target='_top'>dmponline@dcc.ac.uk</a></p>"
 
   roadmap_page:
     title: "Hoja de ruta"
     tab_1: "Planes para el futuro"
     tab_2: "Colabore con nosotros"
-    body_text_tab_1_html: "<p>PGDonline/DMPonline tiene una activa y crecciente base de usuarios y, estamos agradecidos a todos los que sugieren ideas de mejoras y nuevos desarrollos. Regularmente pensamos como expandir nuestros serivcios y examinamos estas necesidades.</p>
+    body_text_tab_1_html: "<p>DMPonline tiene una activa y crecciente base de usuarios y, estamos agradecidos a todos los que sugieren ideas de mejoras y nuevos desarrollos. Regularmente pensamos como expandir nuestros serivcios y examinamos estas necesidades.</p>
     <p>Tenemos algunas mejoras y nuevos desarrollos planificados, entre los que se encuentran:</p>
     <ul>
-        <li>- APIs para crear planes, extraet guías y generar estadísticas de PGDonline</li>
+        <li>- APIs para crear planes, extraet guías y generar estadísticas de DMPonline</li>
         <li>- Soporte multilingue para poder presentar versiones en otros idiomas</li>
         <li>- Soporte para localización de forma que se pueden crear instancias para países en concreto u otros contextos</li>
         <li>- Crear un cliclo de vida que indique el estado de los PGDs y permita acceso institucional a los planes</li>
         <li>- Soporte para la revisión de Planes de Gestión de Datos</li>
     </ul>
+    <p>Estamos revisando los tiempos de desarrollo debido a cambios de personal y contrataciones pendientes. Experamos lanzar una nueva versión a principios de 2016.</p>
+    <p>Para asegurarnos de que estamos en el camino correcto, desarrollamos nuestras planificaciones con nuestro grupo de usuarios de DMPonline. Si desea contribuir a dar forma a nuestros planes futuros, puede unirse a este grupo. Tiene más información sobre como colaborar con nosotros en la pestaña 'Colabore con nosotros'.</p>
     </br>
     <h3>Versión actual</h3>
-    <p>La versión actual de PGDonline se basa en DMPonline 4.2. Incluye personalizaciones a nivel de institución, guías opcionales para financiadores, mejoras en el área de preguntas, mejoras en el interfaz de administración, peticiones para GitHub, una nueva semilla de números aleatorios y una actualización de las librerías de Ruby.</p>
+    <p>La versión actual de DMPonline es la 4.2. Se lanzó en agosto de 2015 e incluye personalizaciones a nivel de institución, guías opcionales para financiadores, mejoras en el área de preguntas, mejoras en el interfaz de administración, peticiones para GitHub, una nueva semilla de números aleatorios y una actualización de las librerías de Ruby.</p>
     <ul>
       <li>- <a href='/files/DMPonline-ReleaseNote-August2015.pdf' target='_blank'>Notas de esta Release</a></li>
-      <li>- <a href='/files/DMPonline-v4-InstitutionalBranding.pdf' target='_blank'>Personalizar la herramienta PGDonline a nivel de institución</a></li>
+      <li>- <a href='/files/DMPonline-v4-InstitutionalBranding.pdf' target='_blank'>Personalizar la herramienta DMPonline a nivel de institución</a></li>
     </ul>
-    <p>El código está disponible en <a target='_blank' href='https://github.com/Consorcio-Madrono/DMPonline_v4'>GitHub</a></p>
+    <p>El código está disponible en <a target='_blank' href='https://github.com/DigitalCurationCentre/DMPonline_v4'>GitHub</a></p>
+    </br>
+    <h3>Versión anterior</h3>
+    <p>La versión anterior de DMPonline es la 4.1. Fue lanzada en mayo de 2015 e incluye la posibilidad de comentarios, mejoras en la guía para firmar con las credenciales de una institución, mejora en la guía de desarrollo y métodos propuestos para internacionalización. Los detalles completos se encuentran en la nota de lanzamiento y en sus documentos asociados.</p>
+    <ul>
+      <li>- <a href='/files/DMPonline-DeliveryNote-May2015.pdf' target='_blank'>Nota de lanzamiento</a></li>
+      <li>- <a href='/files/DMPonline-v4-InstitutionalLogin.pdf' target='_blank'>Entrar en DMPonline versión 4 con credenciales institucionales del Reino Unido</a></li>
+      <li>- <a href='/files/DMPonline-v4-LocaleSupport.pdf' target='_blank'>Desarrollando soporte de localización en DMPonline versión 4</a></li>
+    </ul>
     </br>"
 
-    body_text_tab_2_html: "<p>El <em>Consorcio Madroño</em> mantiene PGDonline, mientras el <em>UK Digital Curation Centre</em> mantiene y desarrolla DMPonline. Tanto en PGDonline como en DMPonline, colaboramos gustosamente con otros. Hay varias formas en las que puede involucrarse:</p>
-    <h3>Únase al grupo de usuarios de DMPonline</h3>
-    <p>Le invitamos a unirse a la <a target='_blank' href='https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=DMPONLINE-USER-GROUP'>lista de correo</a> para el grupo. DMPonline alberga encuentros periódicos para consultar sus planes</p>
-    <p>Puede comunicar sus ideas e intereses para futuros desarrollos usando la lista de correo para que toda la comunidad pueda ofrecer feedback.</p>
+    body_text_tab_2_html: "<p>El <em>UK Digital Curation Centre</em> mantiene y desarrolla DMPonline. Somos un equipo pequeño y, colaboramos gustosamente con otros. Hay varias formas en las que puede involucrarse:</p>
+    <h3>Únase a nuestro grupo de usuarios</h3>
+    <p>Queremos animarle a que se una a nuestros usuarios más activos, por lo que le invitamos a nuestro grupo de usuarios. Tenemos una <a target='_blank' href='https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=DMPONLINE-USER-GROUP'>lista de correo</a> para el grupo a la que se puede unir. También albergamos encuentros periódicos para consultar nuestros planes</p>
+    <p>Normalmente nuestras reuniones de usuarios se centran en un tema (e.j: obtener casos de uso para un API) y las invitaciones se envían basándose en sus áreas de experiencia. Por esta razón es útil para nosotros saber que clase de usuario es usted - investigador, administrador de institución, bibliotecario, desarrollador, financiador, etc.</p>
+    <p>Por favor, comunícanos sus intereses y comparta sus ideas para futuros desarrollos usando la lista de correo para que toda la comunidad pueda ofrecer feedback.</p>
     </br>
-    <h3>Personalice PGDonline</h3>
-    <p>PGDonline puede ser personalizado por instittución y disciplina. Puede añadir plantillas para los usuarios de su organización y crear guías personalizadas que expliquen sus apoyos y servicios locales. Puede también ofrecer respuestas de ejemplo para ayudar a los usuarios que quieran escribir un Plan de Gestión de Datos. Para hacer esto, necesita solicitar derechos de administración. Puede escribirnos a <a href='mailto:e-ciencia@madrimasd.org?Subject=PGDonline%20Admin%20Access' target='_top'>e-ciencia@madrimasd.org</a>.</p>
-    <p>Tiene información adicional sobre como personalizar DMPonline y PGDonline en el <a href='http://www.dcc.ac.uk/dmponline' target='_blank'>sitio web del DCC</a>.</p>
+    <h3>Personalice DMPonline</h3>
+    <p>DMPonline puede ser personalizado por instittución y disciplina. Puede añadir plantillas para los usuarios de su organización y crear guías personalizadas que expliquen sus apoyos y servicios locales. Puede también ofrecer respuestas de ejemplo para ayudar a los usuarios que quieran escribir un Plan de Gestión de Datos. Para hacer esto, necesita solicitar derechos de administración. Puede escribirnos a <a href='mailto:dmponline@dcc.ac.uk?Subject=DMPonline%20Admin%20access' target='_top'>dmponline@dcc.ac.uk</a>.</p>
+    <p>Tiene información adicional sobre como personalizar DMPonline en el <a href='http://www.dcc.ac.uk/dmponline' target='_blank'>sitio web del DCC</a>.</p>
     </br>
     <h3>Contribuyendo con el código</h3>
-    <p>PGDonline es una aplicación escrita en Ruby on Rails. El código fuente está disponible con la licencia GNU Affero General Public License, que permite reutilizar el código con libertad, pero obliga a compartir las extensiones del mismo de la misma forma. Le solicitamos que nos informe si instala una implementación de PGDonline y que devuelva sus contribuciones a la comunidad.</p>
-    <p>Si instala una instancia de PGDonline, requerimos que indique que el creador original de la herramienta ha sido el DCC. Recomendamos que este reconocimiento se haga incluyendo el logo de DMPonline con un enlace a la instancia del DMPonline en el DCC.</p>
-    <p>En DMPonline están deseando trabajar con desarrolladores externos para añadir nuevas funcionalidades a la herramienta. También están dispuestos a desarrollar nuevas características a cambio de un precio. Si encuentra extensiones que cree que deben ser priorizadas y, tiene recursos para apoyar el esfuerzo adicional de su desarrollo, puede contactar con nosotros en la dirección de e-mail dmponline@dcc.ac.uk para negociar los condiciones.</p>
+    <p>DMPonline es una aplicación escrita en Ruby on Rails. El código fuente está disponible con la licencia GNU Affero General Public License, que permite reutilizar el código con libertad, pero obliga a compartir las extensiones del mismo de la misma forma. Le solicitamos que nos informe si instala una implementación de DMPonline y que devuelva sus contribuciones a la comunidad.</p>
+    <p>Si instala una instancia de DMPonline, requerimos que indique que el creador original de la herramienta ha sido el DCC. Recomendamos que este reconocimiento se haga incluyendo el logo de DMPonline cou un enlace a la instancia del DMPonline en el DCC.</p>
+    <p>Estamos deseando trabajar con desarrolladores externos para añadir nuevas funcionalidades a la herramienta. También estamos dispuestos a desarrollar nuevas características a cambio de un precio. Si encuentra extensiones que cree que deben ser priorizadas y, tiene recursos para apoyar el esfuerzo adicional de su desarrollo, puede contactar con nosotros en la dirección de e-mail dmponline@dcc.ac.uk para negociar los condiciones.</p>
     </br>
-    <h3>Apoye éste trabajo</h3>
-    <p>En el DCC están impresionados por la rapidez de la acogida de DMPonline en el mundo. Están interesados en saber como se usa esta herramienta y se promociona. Piden que se informe si se ofrecen cursos o guías sobre DMPonline/PGDonline, ya que les ayuda a mostrar su impacto.</p>
-    <p>El DCC está buscando formas de recuperar su inversión, de forma que se pueda incrementar la demanda de uso de forma efectiva mientras se asegura el mantenimiento y la sotenibilidad a largo plazo de DMPonline. Pronto publicarán sus palanes para que puedan consultarlos, pero agradecen sugerencias sobre cual sería la mejor forma de dar soporte a su trabajo.</p> "
+    <h3>Apoye a nuestro trabajo</h3>
+    <p>Estamos impresionados por la rapidez de la acogida de DMPonline en el Reino Unido y el resto del mundo. Nos encantaría oir como usa esta herramienta y la promociona. Estamos seguros de que otros también están ofreciendo cursos, creando guías y defendiendo esta herramienta. Le pedimos que nos informe sobre estos temas, ya que nos ayudan a mostrar su impacto.</p>
+    <p>Estamos buscando formas de recuperar nuestra inversión, de forma que podamos incrementar la demanda de uso de forma efectiva mientras aseguramos el mantenimiento y la sotenibilidad a largo plazo de DMPonline. Pronto publicaremos nuestros palanes para que puedan consultarlos, pero agradecemos sugerencias sobre cual sería la mejor forma de dar soporte a nuestro trabajo.</p> "
 
   terms_page:
     title: "Condiciones de uso"
     body_text_html: "<div class='white_background'>
-    <h3>PGDonline</h3>
+<p>El Digital Curation Centre ('DCC') es un consorcio mantenido por el Jisc que comprende a las Universidades of Edinburgh, Glasgow y Bath. Nuestra circunscripción principal es la comunidad de investigación del Reino Unido, en particular, el sector de la educación superior.</p>
+</div>
+    <h3>DMPonline</h3>
     <div class='white_background'>
-      <p>PGDonline ('la herramienta', 'el sistema') es una adaptación de la herramienta DMPonline (creada originalmente por el DCC), desarrollada por el Consorcio Madroño. Esta herramienta es un recurso compartido creado para la comunidad investigadora.</p>
+      <p>DMPonline ('la herramienta', 'el sistema') es una herramienta desarrollada por el DCC con el fin de convertirse en un recurso compartido para la comunidad investigadora.</p>
     </div>
     <h3>Su información personal</h3>
     <div class='white_background'>
-      <p>Para la identificación y administración de su cuenta en PGDonline, necesitamos archivar su dirección de correo electrónico. También podríamos usarla para contactar con usted con el fin de obtener información sobre su experiencia en el uso de la herramienta o para informarle de los últimos desarrollos o versiones.</p>
+      <p>Para su identificación y administración de su cuenta en DMPonline, necesitamos archivar su dirección de correo electrónico. También podríamos usarla para contactar con usted con el fin de obtener información sobre su experiencia en el uso de la herramienta o para informarle de los últimos desarrollos o versiones. Esta información podría ser compartida con instituciones asociadas al DCC, únicamente con fines  legítimos. No venderemos, alquilaremos ni comerciaremos con ninguna información que usted nos proporcione.</p>
     </div>
     <h3>Política de privacidad de datos</h3>
     <div class='white_background'>
-      <p>La información que introduzca en este sistema podrán verla además de usted, las personas con las que usted haya elegido compartir el acceso y - solamente de cara al mantenimiento del servicio - los administradores del Consorcio Madroño. Recopilamos información anónima, automatizada y colectiva de los planes, pero no accederemos directamente, ni haremos uso, ni compartiremos su contenido con nadie sin su permiso.</p>
+      <p>La información que introduzca en este sistema podrán verla además de usted, las personas con las que usted haya elegido compartir el acceso y - solamente de cara al mantenimiento del servicio - los administradores de la Universidad de Edimburgo. Recopilamos información anónima, automatizada y colectiva de los planes, pero no accederemos directamente, ni haremos uso, ni compartiremos su contenido con nadie sin su permiso. Los agentes autorizados de su institución de origen podrán acceder a sus planes con propósitos específicos - como por ejemplo, hacer un seguimiento del cumplimiento de los requisitos de la institución o el organismo financiador, o bien calcular las necesidades de almacenamiento.</p>
+    </div>
+    <h3>Libertad de Información</h3>
+    <div class='white_background'>
+      <p>La Universidad de Edimburgo mantiene sus planes en su nombre. No obstante usted es el propietario y único responsable de los mismos. Cualquier solicitud de Libertad de Información será enviada a su institución de origen.</p>
     </div>
     <h3>Claves</h3>
     <div class='white_background'>
@@ -766,7 +784,7 @@ Seleccione qué formato quiere usar y haga clic en 'Exportar'.</p>"
     </div>
     <h3>Cookies</h3>
     <div class='white_background'>
-      <p>Por favor, tenga en cuenta que PGDonline usa cookies.</p>
+      <p>Por favor, tenga en cuenta que DMPonline usa cookies.</p>
     </div>
     <br />
     <div class='white_background'>
